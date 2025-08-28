@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Rita Lee - Rainha do Rock</title>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Marcellus', serif;
+      background: radial-gradient(circle at center, #ff0000 0%, #FF0000 100%);
+      color: #222;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: rgba(255,255,255,0.93);
+      border-radius: 18px;
+      box-shadow: 0 6px 24px #66000088;
+      padding: 32px;
+    }
+    .banner-top {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 14px;
+      display: block;
+      margin: 0 auto 24px auto;
+    }
+    .banner-bottom {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 14px;
+      display: block;
+      margin: 32px auto 0 auto;
+    }
+    .title {
+      font-family: 'Marcellus', serif;
+      font-size: 3em;
+      text-align: center;
+      color: #c80000;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-shadow: 0 3px 12px #ffd700, 0 0 8px #222;
+    }
+    .stars {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+    .stars span, .spin {
+      font-size: 2em;
+      margin: 2px;
+      display: inline-block;
+      animation: girar 2s linear infinite;
+    }
+    @keyframes girar {
+      to { transform: rotate(360deg);}
+    }
+    nav {
+      text-align: center;
+      margin: 18px 0 30px 0;
+    }
+    nav a {
+      color: #fff;
+      background: #ff4d4d;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 26px;
+      border-radius: 20px;
+      margin: 0 22px;
+      font-size: 1.17em;
+      box-shadow: 0 2px 12px #c8000030;
+      transition: background 0.2s, color 0.2s;
+      display: inline-block;
+    }
+    nav a:hover {
+      background: #c80000;
+      color: #ffd700;
+    }
+    .section { margin-bottom: 38px; }
+    .photos img {
+      width: 180px; border-radius: 14px;
+      box-shadow: 0 2px 14px #c8000055;
+      margin: 10px;
+      transition: width 0.3s;
+    }
+    figure {
+      display: inline-block;
+      margin: 10px;
+      text-align: center;
+    }
+    figcaption {
+      font-size: 1em;
+      color: #c80000;
+      margin-top: 4px;
+      background: #ffd70022;
+      border-radius: 8px;
+      padding: 3px 6px;
+    }
+    .vinyl {
+      display: block;
+      margin: 20px auto 10px auto;
+      width: 110px;
+      filter: drop-shadow(0 0 8px #222);
+      animation: girar 2.5s linear infinite;
+    }
+    .controls {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .controls button {
+      font-size: 1.3em;
+      background: #ff4d4d;
+      color: #fff;
+      border: none;
+      border-radius: 14px;
+      margin: 0 40px 10px 40px;
+      padding: 10px 28px;
+      cursor: pointer;
+      transition: background 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 8px #22222222;
+    }
+    .controls button:hover { background: #d62727; }
+    .section p, .lyrics, .photos img { transition: font-size 0.3s; }
+    #dateTime {
+      text-align: center;
+      font-family: monospace;
+      color: #222;
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      background: #ffd70033;
+      padding: 5px 0;
+      border-radius: 12px;
+    }
+    .importance {
+      background: #FF0000;
+      padding: 12px 18px;
+      border-radius: 18px;
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.15em;
+    }
+    .social {
+      text-align: center;
+      margin: 18px 0 0 0;
+      font-size: 1.18em;
+    }
+    .social a {
+      color: #fff;
+      background: #ff4d4d;
+      text-decoration: none;
+      padding: 9px 20px;
+      border-radius: 18px;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1em;
+      box-shadow: 0 2px 8px #c8000030;
+      transition: background 0.2s, color 0.2s;
+      display: inline-block;
+    }
+    .social a:hover {
+      background: #c80000;
+      color: #ffd700;
+    }
+    ul {
+      list-style: disc inside;
+    }
+    h2 {
+      display: flex;
+      align-items: center;
+      font-size: 2em;
+      color: #c80000;
+      margin-bottom: 14px;
+      gap: 10px;
+    }
+    h2 .spin {
+      color: #ffd700;
+      font-size: 1em;
+      margin-left: 6px;
+    }
+  </style>
+</head>
+<body>
+  <img class="banner-top" src="https://eventicket.s3-sa-east-1.amazonaws.com/imgs/29050-bannerprincipal-1-1.png" alt="Banner Rita Lee">
+  <div class="container">
+    <div class="title">Rita Lee - Rainha do Rock</div>
+    <div class="stars">
+      <span class="spin">★</span><span class="spin">☆</span>
+      <span class="spin">★</span><span class="spin">☆</span>
+      <span class="spin">★</span><span class="spin">☆</span>
+      <span class="spin">★</span><span class="spin">★</span>
+      <span class="spin">☆</span><span class="spin">★</span>
+      <span class="spin">☆</span><span class="spin">★</span>
+      <span class="spin">☆</span><span class="spin">★</span>
+      <span class="spin">☆</span><span class="spin">★</span>
+      <span class="spin">☆</span><span class="spin">★</span>
+    </div>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#musicas">Músicas</a>
+      <a href="#letras">Letras</a>
+      <a href="#curiosidades">Curiosidades</a>
+      <a href="#premiacoes">Premiações</a>
+    </nav>
+    <div id="dateTime"></div>
+
+    <section id="inicio" class="section">
+      <h2>Sobre Rita Lee <span class="spin">★</span></h2>
+      <div class="controls">
+        <button onclick="changeSize(1.2)">🔍+</button>
+        <button onclick="changeSize(0.83)">🔍-</button>
+      </div>
+      <p class="bio">
+        Rita Lee Jones nasceu em São Paulo, em 1947, e é considerada a maior representante feminina do rock brasileiro.
+        Começou sua carreira no grupo Os Mutantes, revolucionando a música nacional com irreverência e criatividade.
+        Seu talento, voz marcante e composições ousadas trouxeram inovação e liberdade para várias gerações.
+      </p>
+      <p class="bio">
+        Após sair dos Mutantes, Rita Lee seguiu carreira solo com sucessos como “Mania de Você”, “Agora Só Falta Você” e “Ovelha Negra”.
+        Sua trajetória é marcada pelo empoderamento feminino, humor inteligente e defesa de causas sociais.
+      </p>
+    </section>
+
+    <section id="fotos" class="section photos">
+      <h2>Fotos <span class="spin">★</span></h2>
+      <span class="spin">★</span>
+      <figure>
+        <img src="https://akamai.sscdn.co/letras/215x215/fotos/c/4/3/6/c436c6dad217f0245af5ddc5ece2513a.jpg" alt="Rita Lee" title="Rita Lee">
+        <figcaption>Rita Lee em apresentação histórica nos anos 1980.</figcaption>
+      </figure>
+      <figure>
+        <img src="https://akamai.sscdn.co/uploadfile/letras/fotos/f/5/0/6/f506783c9cfc53806846f7e2cc4cb0ac.jpg" alt="Rita Lee" title="Rita Lee">
+        <figcaption>Rita Lee ao lado de Roberto de Carvalho, seu parceiro musical.</figcaption>
+      </figure>
+      <span class="spin">★</span>
+    </section>
+
+    <section id="musicas" class="section">
+      <h2>Músicas <span class="spin">★</span></h2>
+      <img src="https://pngimg.com/d/vinyl_PNG31.png" class="vinyl" alt="Disco de vinil">
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=YF3bWwNoxbE" target="_blank">Ovelha Negra (YouTube)</a></li>
+        <li><a href="https://www.youtube.com/watch?v=ErqVhA1t8hE" target="_blank">Mania de Você (YouTube)</a></li>
+        <li><a href="https://www.youtube.com/watch?v=2BqLy1lY5_E" target="_blank">Lança Perfume (YouTube)</a></li>
+        <li><a href="https://www.youtube.com/watch?v=6vZ0fG1b0_s" target="_blank">Agora Só Falta Você (YouTube)</a></li>
+        <li><a href="https://www.youtube.com/watch?v=QWZTz7pys4Q" target="_blank">Flagra (YouTube)</a></li>
+        <li><a href="https://www.youtube.com/watch?v=SnS1U6f88F0" target="_blank">Amor e Sexo (YouTube)</a></li>
+        <li><a href="https://www.youtube.com/watch?v=RZyYxZ3N9Qw" target="_blank">Chega Mais (YouTube)</a></li>
+      </ul>
+      <div class="social">
+        <a href="https://instagram.com/ritalee_oficial" target="_blank">Instagram</a>
+        <a href="https://twitter.com/ritalee_oficial" target="_blank">Twitter</a>
+        <a href="https://facebook.com/ritaleeoficial" target="_blank">Facebook</a>
+        <a href="https://www.youtube.com/watch?v=VYQdUIaKQJc" target="_blank">Entrevista Roda Viva</a>
+        <a href="https://www.youtube.com/watch?v=5vD4QZ7p6pY" target="_blank">Entrevista Programa do Jô</a>
+      </div>
+    </section>
+
+    <section id="letras" class="section">
+      <h2>Letras de Música <span class="spin">★</span></h2>
+      <div class="lyrics">
+        <b>Ovelha Negra</b><br>
+        <i>“Levava uma vida sossegada<br>
+        Gostava de sombra e água fresca<br>
+        ...<br>
+        Mas, cedo ou tarde, eu vou me encontrar<br>
+        Ovelha negra, ovelha negra, ovelha negra da família...”</i>
+      </div>
+      <div class="lyrics">
+        <b>Mania de Você</b><br>
+        <i>“Meu bem, você me dá água na boca<br>
+        Vestindo fantasias, tirando a roupa<br>
+        ...”</i>
+      </div>
+      <div class="lyrics">
+        <b>Lança Perfume</b><br>
+        <i>“Você pensa que é só<br>
+        Lançar perfume por aí<br>
+        ...”</i>
+      </div>
+      <div class="lyrics">
+        <b>Agora Só Falta Você</b><br>
+        <i>“Depois da festa é hora de voltar<br>
+        Só faltou você...”</i>
+      </div>
+    </section>
+
+    <section id="curiosidades" class="section">
+      <h2>Curiosidades <span class="spin">★</span></h2>
+      <ul>
+        <li>Rita Lee já escreveu livros infantis.</li>
+        <li>É vegetariana e defensora dos direitos dos animais.</li>
+        <li>Recebeu o título de doutora honoris causa pela Unicamp.</li>
+        <li>Foi casada com Roberto de Carvalho, seu parceiro musical.</li>
+        <li>Participou do disco "Tropicália ou Panis et Circensis".</li>
+      </ul>
+    </section>
+
+    <section id="premiacoes" class="section">
+      <h2>Premiações <span class="spin">★</span></h2>
+      <ul>
+        <li>Grammy Latino de Melhor Álbum de Rock Brasileiro.</li>
+        <li>Prêmio Multishow de Música Brasileira.</li>
+        <li>Ordem do Mérito Cultural do Brasil.</li>
+      </ul>
+    </section>
+
+    <div class="importance">
+      Rita Lee é um ícone da cultura brasileira, símbolo de liberdade, irreverência e criatividade. Sua importância vai além da música, influenciando gerações com sua atitude e coragem.
+    </div>
+  </div>
+  <img class="banner-bottom" src="https://thmais.com.br/wp-content/uploads/2025/04/ritas-documentario-sobre-rita-lee-divulga-data-de-estreia-e-cartaz-apos-abertura-do-e-tudo-verdade-696x410.jpg" alt="Banner Rita Lee Documentário">
+  <script>
+    // Atualizar data e hora
+    function updateDateTime() {
+      const dt = new Date();
+      document.getElementById('dateTime').innerText =
+        dt.toLocaleDateString('pt-BR') + ' ' +
+        dt.toLocaleTimeString('pt-BR');
+    }
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+
+    // Botões de aumentar/diminuir
+    let currSize = 1;
+    function changeSize(factor) {
+      currSize *= factor;
+      document.querySelectorAll('.bio').forEach(e => {
+        e.style.fontSize = currSize + 'em';
+      });
+      document.querySelectorAll('.lyrics').forEach(e => {
+        e.style.fontSize = currSize + 'em';
+      });
+      document.querySelectorAll('.photos img').forEach(e => {
+        e.style.width = (180 * currSize) + 'px';
+      });
+    }
+  </script>
+</body>
+</html>
